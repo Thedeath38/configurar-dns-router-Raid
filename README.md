@@ -5,9 +5,9 @@
 
     ![](img/iso.PNG)
 
-3. A?adir los discos duros con los que se van a hacer el RAID
+2. Añadir los discos duros con los que se van a hacer el RAID
 
-    ![](C:\Users\MARICARMEN\Pictures\insertar_discos_duros.png)
+    ![](img/insertar_discos_duros.png)
 
 4. Iniciar la Maquina virtual y seguir los pasos hasta llegar a particionado de disco. Escoge la opcion manual y usar la configuracion que se muestra abajo. En mi caso el servidor dns le puse un raid0 con 2 discos duros + area de intercambio y a los servidores web raid5 con 4 discos duros + area de intercambio
 
@@ -22,9 +22,9 @@
 ### 2. Configurar router en ubuntu
 * Antes de nada asegurate de la configuracion de las 2 tarjetas de red en vbox.
 
-    ![](C:\Users\MARICARMEN\Pictures\red_externa.png)  
+    ![](img/red_externa.png)  
 
-    ![](C:\Users\MARICARMEN\Pictures\red_interna.png)
+    ![](img/red_interna.png)
 1. En ubuntu configurar las interfaces en el siguiente fichero  
 `sudo nano /etc/network/interfaces`  
 `ifconfig -a` Muestra las tarjetas de red de tu ordenador
@@ -49,7 +49,7 @@
     ~~~
     ![](img/Router_interfaces.png)
 
-2. Configuraa el reenvio de paquetes
+2. Configura el reenvio de paquetes
 `sudo nano /etc/sysctl.conf`  
 Buscar la linea  
 `# net.ipv4.ip_forward=1`  
@@ -85,7 +85,9 @@ Quitale la almoadilla devería de quedar asín
 
 ### 3. Configuracion servidor de DNS
 * Asegurate de estar conectado com red interna
-1. Configuracion de la tarjeta de red
+1. Configuracion de la tarjeta de red  
+`sudo nano /etc/network/interfaces`  
+`ifconfig -a` Muestra las tarjetas de red de tu ordenador
     ~~~
     # El signo '#' es para comentar una linea
     # configuracion de loopback network interfaces
@@ -237,8 +239,31 @@ Quitale la almoadilla devería de quedar asín
     `named-checkzone sitioa /etc/bind/rd.sitioa.com`
 
 ### 4. Servidors web y ftp
-1. Instalamos el servidor web con el siguiente comandos  
+
+* Asegurate de estar conectado con red interna
+1. Configuracion de la tarjeta de red  
+`sudo nano /etc/network/interfaces`  
+`ifconfig -a` Muestra las tarjetas de red de tu ordenador
+    ~~~
+    # El signo '#' es para comentar una linea
+    # configuracion de loopback network interfaces
+    # tambien llamado localhost o bucle interno
+    auto lo
+    iface lo inet looback
+
+    # configuracion de la primera interfaz de red interna
+    auto enp0s3
+    iface enp0s3 inet static
+          address 192.168.10.x
+          netmask 255.255.255.0
+          gateway 192.168.10.254
+          dns-nameservers 192.168.10.254 8.8.8.8
+    ~~~
+    **En la posicion x pon '2' para sitioa.com o '3' para sitiob.net o '4' para sitioc.net y reiniciamos las tarjetas de red**  
+    `sudo /etc/init.d/network restart`
+
+2. Instalamos el servidor web con el siguiente comandos  
 `sudo apt-get install apache2`
 
-2. Instalamos el servidor ftp con el siguiente comando  
+3. Instalamos el servidor ftp con el siguiente comando  
 `sudo apt-get install vsftpd`
