@@ -17,7 +17,7 @@
     * Configuracion RAID 5
         ![](C:\Users\MARICARMEN\Pictures\raid5.png)
 
-5. Continuar la instalación
+5. Continuar la instalaciÃ³n
 
 ### 2. Configurar router en ubuntu
 * Antes de nada asegurate de la configuracion de las 2 tarjetas de red en vbox.
@@ -53,7 +53,7 @@
 `sudo nano /etc/sysctl.conf`  
 Buscar la linea  
 `# net.ipv4.ip_forward=1`  
-Quitale la almoadilla devería de quedar asín  
+Quitale la almoadilla deverÃ­a de quedar asÃ­n  
 `net.ipv4.ip_forward=1`
 
 3. Por ultimo pasaremos los paquetes que vengan de la red interna a la externa
@@ -147,7 +147,7 @@ Quitale la almoadilla devería de quedar asín
             	28800        //refresco
             	3600         //reintentos
             	604800       //caducidad
-              38400)       // tiempo en caché
+              38400)       // tiempo en cachÃ©
 
             @ IN NS servidor01.sitioa.com.
             servidor01.sitioa.com. IN A 192.168.10.2
@@ -167,7 +167,7 @@ Quitale la almoadilla devería de quedar asín
             	28800        //refresco
             	3600         //reintentos
             	604800       //caducidad
-              38400)       // tiempo en caché
+              38400)       // tiempo en cachÃ©
 
             @ IN NS servidor01.sitiob.net.
             servidor01.sitiob.net. IN A 192.168.10.3
@@ -187,7 +187,7 @@ Quitale la almoadilla devería de quedar asín
             	28800        //refresco
             	3600         //reintentos
             	604800       //caducidad
-              38400)       // tiempo en caché
+              38400)       // tiempo en cachÃ©
 
             @ IN NS servidor01.sitioc.net.
             servidor01.sitioc.net. IN A 192.168.10.4
@@ -207,7 +207,7 @@ Quitale la almoadilla devería de quedar asín
               28800        //refresco
               3600         //reintentos
               604800       //caducidad
-              38400)       // tiempo en caché
+              38400)       // tiempo en cachÃ©
 
             @ IN NS servidor01.
             2 IN PTR servidor01.sitioa.com.
