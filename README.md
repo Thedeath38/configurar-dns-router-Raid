@@ -105,7 +105,7 @@ Quitale la almoadilla devería de quedar asín
 2. Instalar bind9 es el servidor de dns para ubuntu SERVER  
 `sudo apt-get install bind9`
 
-3. Ahora vamos a configurar los archivos de configracion de bind9
+3. Ahora vamos a configurar los archivos de configuración de bind9
     * El primero el el named.conf.local  
     `sudo nano /etc/bind/named.conf.local`  
 
@@ -135,7 +135,7 @@ Quitale la almoadilla devería de quedar asín
 
     ~~~
     * Los segundos son los archivos de dns que hemos puesto en el anterior
-        * Archivo /etc/bind/rd.sitioa.com con el siguiento comando  
+        * Archivo /etc/bind/rd.sitioa.com con el siguiente comando  
         `sudo nano /etc/bind/rd.sitioa.com`
 
             ![](img/sitioa.com.png)
@@ -155,7 +155,7 @@ Quitale la almoadilla devería de quedar asín
 
             ~~~
 
-        * Archivo /etc/bind/rd.sitiob.net con el siguiento comando  
+        * Archivo /etc/bind/rd.sitiob.net con el siguiente comando  
         `sudo nano /etc/bind/rd.sitiob.net`
 
             ![](img/sitiob.net.png)
@@ -175,7 +175,7 @@ Quitale la almoadilla devería de quedar asín
 
             ~~~
 
-        * Archivo /etc/bind/rd.sitioc.net con el siguiento comando  
+        * Archivo /etc/bind/rd.sitioc.net con el siguiente comando  
         `sudo nano /etc/bind/rd.sitioc.net`
 
             ![](img/sitioc.net.png)
