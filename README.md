@@ -3,7 +3,7 @@
 ### 1. CONFIGURAR RAID
 1. Usar una imagen iso de UBUNTU para insertarla en la maquina virtual.
 
-    ![](img\iso.PNG)
+    ![](img/iso.PNG)
 
 3. A?adir los discos duros con los que se van a hacer el RAID
 
@@ -12,10 +12,10 @@
 4. Iniciar la Maquina virtual y seguir los pasos hasta llegar a particionado de disco. Escoge la opcion manual y usar la configuracion que se muestra abajo. En mi caso el servidor dns le puse un raid0 con 2 discos duros + area de intercambio y a los servidores web raid5 con 4 discos duros + area de intercambio
 
     * Configuracion RAID 0
-        ![](C:\Users\MARICARMEN\Pictures\raid0.png)
+        ![](img/Raid0.PNG)
 
     * Configuracion RAID 5
-        ![](C:\Users\MARICARMEN\Pictures\raid5.png)
+        ![](img/Raid5.PNG)
 
 5. Continuar la instalación
 
@@ -47,7 +47,7 @@
     auto enp0s8
     iface enp0s8 inet dhcp
     ~~~
-    ![](C:\Users\MARICARMEN\Pictures\Router_interfaces.png)
+    ![](img/Router_interfaces.png)
 
 2. Configuraa el reenvio de paquetes
 `sudo nano /etc/sysctl.conf`  
@@ -109,7 +109,7 @@ Quitale la almoadilla devería de quedar asín
     * El primero el el named.conf.local  
     `sudo nano /etc/bind/named.conf.local`  
 
-      ![](C:\Users\MARICARMEN\Pictures\named.conf.local.png)
+      ![](img/named.conf.local.png)
     ~~~
     zone "sitioa.com"{
           type: master;
@@ -138,7 +138,7 @@ Quitale la almoadilla devería de quedar asín
         * Archivo /etc/bind/rd.sitioa.com con el siguiento comando  
         `sudo nano /etc/bind/rd.sitioa.com`
 
-            ![](C:\Users\MARICARMEN\Pictures\sitioa.com.png)
+            ![](img/sitioa.com.png)
             ~~~
             $TTL 38400
 
@@ -158,7 +158,7 @@ Quitale la almoadilla devería de quedar asín
         * Archivo /etc/bind/rd.sitiob.net con el siguiento comando  
         `sudo nano /etc/bind/rd.sitiob.net`
 
-            ![](C:\Users\MARICARMEN\Pictures\sitiob.net.png)
+            ![](img/sitiob.net.png)
             ~~~
             $TTL 38400
 
@@ -178,7 +178,7 @@ Quitale la almoadilla devería de quedar asín
         * Archivo /etc/bind/rd.sitioc.net con el siguiento comando  
         `sudo nano /etc/bind/rd.sitioc.net`
 
-            ![](C:\Users\MARICARMEN\Pictures\sitioc.net.png)
+            ![](img/sitioc.net.png)
             ~~~
             $TTL 38400
 
@@ -197,7 +197,7 @@ Quitale la almoadilla devería de quedar asín
         * Archivo resolucion inversa /etc/bind/ri.192.168.10 con el siguiento comando  
         `sudo nano /etc/bind/ri.192.168.10`
 
-            ![](C:\Users\MARICARMEN\Pictures\192.168.10.png)
+            ![](img/192.168.10.png)
 
             ~~~
             $TTL 38400
@@ -218,7 +218,7 @@ Quitale la almoadilla devería de quedar asín
     * Despues tienes que configurar en caso de que el servidor no conozca los nombres de dominio le pregunte a otro servidor.  
     `sudo nano /etc/bind/named.conf.option`
 
-      ![](C:\Users\MARICARMEN\Pictures\named.conf.option.png)
+      ![](img/named.conf.option.png)
 
       ~~~
       // quitar la doble '/' a todo el forwarders
