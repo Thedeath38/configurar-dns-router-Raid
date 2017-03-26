@@ -22,9 +22,9 @@
 ### 2. Configurar router en ubuntu
 * Antes de nada asegurate de la configuracion de las 2 tarjetas de red en vbox.
 
-    ![](img/red_externa.png)  
+    ![](img/red_externa.PNG)  
 
-    ![](img/red_interna.png)
+    ![](img/red_interna.PNG)
 1. En ubuntu configurar las interfaces en el siguiente fichero  
 `sudo nano /etc/network/interfaces`  
 `ifconfig -a` Muestra las tarjetas de red de tu ordenador
