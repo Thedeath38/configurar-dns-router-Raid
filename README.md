@@ -145,11 +145,11 @@ Quitale la almoadilla devería de quedar asín
             $TTL 38400
 
             @ IN SOA servidor01.sitioa.com. correoadmin.sitioa.com. (
-            	2014092900   //num serie
-            	28800        //refresco
-            	3600         //reintentos
-            	604800       //caducidad
-              38400)       // tiempo en caché
+            	2014092900;   //num serie
+            	28800;        //refresco
+            	3600;         //reintentos
+            	604800;       //caducidad
+                38400);       // tiempo en caché
 
             @ IN NS servidor01.sitioa.com.
             servidor01.sitioa.com. IN A 192.168.10.2
@@ -165,11 +165,11 @@ Quitale la almoadilla devería de quedar asín
             $TTL 38400
 
             @ IN SOA servidor01.sitiob.net. correoadmin.sitiob.net. (
-            	2016032101   //num serie
-            	28800        //refresco
-            	3600         //reintentos
-            	604800       //caducidad
-              38400)       // tiempo en caché
+            	2016032101;   //num serie
+            	28800;        //refresco
+            	3600;         //reintentos
+            	604800;       //caducidad
+                38400);       // tiempo en caché
 
             @ IN NS servidor01.sitiob.net.
             servidor01.sitiob.net. IN A 192.168.10.3
@@ -185,11 +185,11 @@ Quitale la almoadilla devería de quedar asín
             $TTL 38400
 
             @ IN SOA servidor01.sitioc.net. correoadmin.sitioc.net. (
-            	2016032102   //num serie
-            	28800        //refresco
-            	3600         //reintentos
-            	604800       //caducidad
-              38400)       // tiempo en caché
+            	2016032102;   //num serie
+            	28800;        //refresco
+            	3600;         //reintentos
+            	604800;       //caducidad
+                38400);       // tiempo en caché
 
             @ IN NS servidor01.sitioc.net.
             servidor01.sitioc.net. IN A 192.168.10.4
@@ -205,11 +205,11 @@ Quitale la almoadilla devería de quedar asín
             $TTL 38400
 
             @ IN SOA servidor01.sitioa.net. correoadmin.sitioa.net. (
-              2017032100   //num serie
-              28800        //refresco
-              3600         //reintentos
-              604800       //caducidad
-              38400)       // tiempo en caché
+              2017032100;   //num serie
+              28800;        //refresco
+              3600;         //reintentos
+              604800;       //caducidad
+              38400);       // tiempo en caché
 
             @ IN NS servidor01.
             2 IN PTR servidor01.sitioa.com.
