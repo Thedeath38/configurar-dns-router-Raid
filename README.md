@@ -114,24 +114,24 @@ Quitale la almoadilla devería de quedar asín
       ![](img/named.conf.local.png)
     ~~~
     zone "sitioa.com"{
-          type: master;
+          type master;
           file "/etc/bind/rd.sitioa.com";
     };
 
     zone "sitiob.net"{
-          type: master;
+          type master;
           file "/etc/bind/rd.sitiob.net";
     };
 
     zone "sitioa.com"{
-          type: master;
+          type master;
           file "/etc/bind/rd.sitioc.net";
     };
 
     //resolucion inversa
 
     zone "10.168.192.in-addr.arpa"{
-          type: master;
+          type master;
           file "/etc/bind/ri.192.168.10";
     }
 
@@ -218,7 +218,7 @@ Quitale la almoadilla devería de quedar asín
             ~~~  
 
     * Despues tienes que configurar en caso de que el servidor no conozca los nombres de dominio le pregunte a otro servidor.  
-    `sudo nano /etc/bind/named.conf.option`
+    `sudo nano /etc/bind/named.conf.options`
 
       ![](img/named.conf.option.png)
 
